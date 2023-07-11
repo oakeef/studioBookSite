@@ -8,6 +8,10 @@ import Features from "./features";
 import Details from "./details";
 import Lightboxes from "./lightboxes";
 import Copyright from "./copyright";
+import "../css/bootstrap.css";
+import "../css/magnific-popup.css";
+import "../css/swiper.css";
+import "../css/styles.css";
 
 export default function Home() {
   return (
