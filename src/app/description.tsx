@@ -1,20 +1,25 @@
+import Image, { StaticImageData } from "next/image";
+import description1 from "../../public/description-1.png";
+import description2 from "../../public/description-2.png";
+import description3 from "../../public/description-3.png";
+
 export default function Description() {
   const cards: CardProps[] = [
     {
       title: "Lists Builder",
-      image: "images/description-1.png",
+      image: description1,
       description:
         "Its very easy to start creating email lists for your marketing actions. Just create your Tivo account",
     },
     {
       title: "Campaign Tracker",
-      image: "images/description-2.png",
+      image: description2,
       description:
         "Campaigns is a feature we've developed since the beginning because it's at the core of Tivo's functionalities",
     },
     {
       title: "Analytics Tool",
-      image: "images/description-3.png",
+      image: description3,
       description:
         "Tivo collects customer data in order to help you analyse different situations and take required action",
     },
@@ -52,7 +57,7 @@ export default function Description() {
 
 type CardProps = {
   title: string;
-  image: string;
+  image: StaticImageData;
   description: string;
 };
 
@@ -61,7 +66,7 @@ function Card(props: CardProps) {
   return (
     <div className="card">
       <div className="card-image">
-        <img className="img-fluid" src={image} alt="alternative"></img>
+        <Image className="img-fluid" src={image} alt="alternative" />
       </div>
       <div className="card-body">
         <h4 className="card-title">{title}</h4>

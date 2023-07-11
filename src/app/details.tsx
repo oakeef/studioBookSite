@@ -1,3 +1,5 @@
+import Image from "next/image";
+import details from "../../public/details.png";
 export default function Details() {
   return (
     <div id="details" className="basic-1">
@@ -33,11 +35,7 @@ export default function Details() {
           </div>
           <div className="col-lg-6">
             <div className="image-container">
-              <img
-                className="img-fluid"
-                src="images/details.png"
-                alt="alternative"
-              ></img>
+              <Image src={details} className="img-fluid" alt="" />
             </div>
           </div>
         </div>

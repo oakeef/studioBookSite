@@ -1,3 +1,5 @@
+import Image from "next/image";
+import headerimage from "../../public/header-software-app.png";
 export default function Header() {
   return (
     <>
@@ -20,11 +22,11 @@ export default function Header() {
               <div className="col-lg-6 col-xl-7">
                 <div className="image-container">
                   <div className="img-wrapper">
-                    <img
+                    <Image
                       className="img-fluid"
-                      src="images/header-software-app.png"
+                      src={headerimage}
                       alt="alternative"
-                    ></img>
+                    />
                   </div>
                 </div>
               </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+import logo from "../../public/logo.svg";
 export default function Navigation() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
@@ -6,7 +8,7 @@ export default function Navigation() {
             <!-- <a className="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> --> */}
 
         <a className="navbar-brand logo-image" href="index.html">
-          <img src="images/logo.svg" alt="alternative"></img>
+          <Image src={logo} alt="alternative" />
         </a>
 
         <button

@@ -1,3 +1,6 @@
+import Image from "next/image";
+import lightbox from "../../public/details-lightbox.png";
+
 export default function Lightboxes() {
   const boxes: LightboxProps[] = [
     {
@@ -62,11 +65,7 @@ export function Lightbox({ title, content, list, number }: LightboxProps) {
           </button>
           <div className="col-lg-8">
             <div className="image-container">
-              <img
-                className="img-fluid"
-                src="images/details-lightbox.png"
-                alt="alternative"
-              ></img>
+              <Image className="img-fluid" src={lightbox} alt="alternative" />
             </div>
           </div>
           <div className="col-lg-4">
@@ -86,7 +85,7 @@ export function Lightbox({ title, content, list, number }: LightboxProps) {
             </ul>
             <a className="btn-solid-reg mfp-close" href="sign-up.html">
               SIGN UP
-            </a>{" "}
+            </a>
             <a
               className="btn-outline-reg mfp-close as-button"
               href="#screenshots"

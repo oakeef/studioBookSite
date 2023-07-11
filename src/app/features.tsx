@@ -1,9 +1,14 @@
+import Image, { StaticImageData } from "next/image";
+import features1 from "../../public/features-1.png";
+import features2 from "../../public/features-2.png";
+import features3 from "../../public/features-3.png";
+
 export default function Features() {
   const tabs: FeatureTabProps[] = [
     {
       number: 1,
       tabTitle: "List Builder",
-      image: "images/features-1.png",
+      image: features1,
       title: "List Building Is Easier Than Ever",
       content: `It's very easy to start using Tivo. You just need to fill out and submit the <a className="blue page-scroll" href="sign-up.html">Sign Up Form</a> and you will receive access to the app and all of its features in no more than 24h.`,
       list: [
@@ -15,7 +20,7 @@ export default function Features() {
     {
       number: 2,
       tabTitle: "Campaigns",
-      image: "images/features-2.png",
+      image: features2,
       title: "Campaigns Monitoring Tools",
       content: `Campaigns monitoring is a feature we've developed since the beginning because it's at the core of Tivo and basically to any marketing activity focused on results.`,
       list: [
@@ -27,7 +32,7 @@ export default function Features() {
     {
       number: 3,
       tabTitle: "Analytics",
-      image: "images/features-3.png",
+      image: features3,
       title: "Analytics Control Panel",
       content: `Analytics control  panel is important for every marketing team so it's beed implemented from the begging and designed to produce reports based on very little input information.`,
       list: [
@@ -98,7 +103,7 @@ export default function Features() {
 type FeatureTabProps = {
   tabTitle: string;
   title: string;
-  image: string;
+  image: StaticImageData;
   content: string;
   list: string[];
   number: number;
@@ -115,7 +120,7 @@ function FeatureTab({ title, image, content, list, number }: FeatureTabProps) {
       <div className="row">
         <div className="col-lg-6">
           <div className="image-container">
-            <img className="img-fluid" src={image} alt="alternative"></img>
+            <Image className="img-fluid" src={image} alt="alternative" />
           </div>
         </div>
         <div className="col-lg-6">
