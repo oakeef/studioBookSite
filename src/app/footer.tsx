@@ -1,3 +1,4 @@
+import { BsFillRecord2Fill } from "react-icons/bs";
 export default function Footer() {
   return (
     <div>
@@ -9,7 +10,7 @@ export default function Footer() {
         viewBox="0 0 1920 79"
       >
         <defs>
-          <style>{`.cls-2{fill:#5f4def;}`}</style>
+          <style>{`.cls-2{fill:#393E46;}`}</style>
         </defs>
         <title>footer-frame</title>
         <path
@@ -21,73 +22,81 @@ export default function Footer() {
       <div className="footer">
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
-              <div className="footer-col first">
-                <h4>About Tivo</h4>
-                <p className="p-small">
-                  We&apos;re passionate about designing and developing one of
-                  the best marketing apps in the market
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="footer-col middle">
-                <h4>Important Links</h4>
-                <ul className="list-unstyled li-space-lg p-small">
-                  <li className="media">
-                    <i className="fas fa-square"></i>
-                    <div className="media-body">
-                      Our business partners
-                      <a className="white" href="#your-link">
-                        startupguide.com
-                      </a>
-                    </div>
-                  </li>
-                  <li className="media">
-                    <i className="fas fa-square"></i>
-                    <div className="media-body">
-                      Read our
-                      <a className="white" href="terms-conditions.html">
-                        Terms & Conditions
-                      </a>
-                      ,
-                      <a className="white" href="privacy-policy.html">
-                        Privacy Policy
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="footer-col last">
-                <h4>Contact</h4>
-                <ul className="list-unstyled li-space-lg p-small">
-                  <li className="media">
-                    <i className="fas fa-map-marker-alt"></i>
-                    <div className="media-body">
-                      22 Innovative, San Francisco, CA 94043, US
-                    </div>
-                  </li>
-                  <li className="media">
-                    <i className="fas fa-envelope"></i>
-                    <div className="media-body">
-                      <a className="white" href="mailto:contact@tivo.com">
-                        contact@tivo.com
-                      </a>
-                      <i className="fas fa-globe"></i>
-                      <a className="white" href="#your-link">
-                        www.tivo.com
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <FooterSection
+              title=" Impress with Professionalism"
+              content="We're passionate about designing and developing one of the best
+        booking apps on the market"
+            />
+            <FooterSection
+              title="App currently in development"
+              content="Studio Book is currently in beta testing and will be available to the public soon"
+            />
+            <FooterSection
+              title="Contact Information"
+              content=""
+              contact={true}
+            />
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+type FooterSectionProps = {
+  title: string;
+  content: string;
+  list?: string[];
+  contact?: boolean;
+};
+
+function FooterSection({ title, content, list, contact }: FooterSectionProps) {
+  let section = (
+    <>
+      <p className="p-small">{content}</p>
+    </>
+  );
+  if (list) {
+    section = (
+      <ul className="list-unstyled li-space-lg p-small">
+        {list.map((item) => {
+          return (
+            <li key={item} className="media">
+              <BsFillRecord2Fill />
+              <div className="media-body">{item}</div>
+            </li>
+          );
+        })}
+      </ul>
+    );
+  } else if (contact) {
+    section = (
+      <ul className="list-unstyled li-space-lg p-small">
+        <li className="media">
+          <i className="fas fa-map-marker-alt"></i>
+          <div className="media-body">Halifax, NS</div>
+        </li>
+        <li className="media">
+          <i className="fas fa-envelope"></i>
+          <div className="media-body">
+            {/* <a className="white" href="mailto:contact@tivo.com">
+              contact@tivo.com
+            </a> */}
+            <i className="fas fa-globe"></i>
+            <a className="white" href="#your-link">
+              www.studiobook.app
+            </a>
+          </div>
+        </li>
+      </ul>
+    );
+  }
+
+  return (
+    <div className="col-md-4">
+      <div className="footer-col">
+        <h4>{title}</h4>
+        {section}
       </div>
     </div>
   );

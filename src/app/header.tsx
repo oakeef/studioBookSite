@@ -1,5 +1,5 @@
 import Image from "next/image";
-import headerimage from "../../public/header-software-app.png";
+import headerimage from "../../public/details.png";
 export default function Header() {
   return (
     <>
@@ -9,13 +9,14 @@ export default function Header() {
             <div className="row">
               <div className="col-lg-6 col-xl-5">
                 <div className="text-container">
-                  <h1>SaaS App HTML Landing Page</h1>
+                  <h1>A booking app to simplify scheduling</h1>
                   <p className="p-large">
-                    Use Tivo to automate your marketing actions in order to
-                    reach a much larger audience
+                    Say goodbye to tedious scheduling challenges and say hello
+                    to seamless appointment management with your most discerning
+                    clients.
                   </p>
-                  <a className="btn-solid-lg page-scroll" href="sign-up.html">
-                    SIGN UP
+                  <a className="btn-solid-lg page-scroll" href="#">
+                    Learn More
                   </a>
                 </div>
               </div>
@@ -42,7 +43,7 @@ export default function Header() {
         viewBox="0 0 1920 310"
       >
         <defs>
-          <style>{`.cls-1{fill:#5f4def;}`}</style>
+          <style>{`.cls-1{fill:#393E46;}`}</style>
         </defs>
         <title>header-frame</title>
         <path

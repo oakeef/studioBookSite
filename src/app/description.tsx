@@ -6,22 +6,22 @@ import description3 from "../../public/description-3.png";
 export default function Description() {
   const cards: CardProps[] = [
     {
-      title: "Lists Builder",
+      title: "Seamless Self-Scheduling",
       image: description1,
       description:
-        "Its very easy to start creating email lists for your marketing actions. Just create your Tivo account",
+        "Empower your clients with the ability to effortlessly schedule appointments through our user-friendly interface. With just a few taps, they can view your availability, choose a suitable time slot, and book their appointment.",
     },
     {
-      title: "Campaign Tracker",
+      title: "Streamline Your Schedule",
       image: description2,
       description:
-        "Campaigns is a feature we've developed since the beginning because it's at the core of Tivo's functionalities",
+        "Effortlessly manage your appointments and take control of your valuable time. Our intuitive interface and advanced scheduling tools empower you to organize, reschedule, and cancel appointments with ease. ",
     },
     {
-      title: "Analytics Tool",
+      title: "Time Efficiency Redefined",
       image: description3,
       description:
-        "Tivo collects customer data in order to help you analyse different situations and take required action",
+        "No more wasted hours going back and forth to find a mutually suitable time. Studio Book streamlines the appointment scheduling process, allowing clients to book their preferred slots instantly.",
     },
   ];
 
@@ -30,9 +30,9 @@ export default function Description() {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="above-heading">DESCRIPTION</div>
+            <div className="above-heading">Studio Book</div>
             <h2 className="h2-heading">
-              Marketing Automation Will Bring More Qualified Leads
+              Empowering Clients, Liberating Professionals
             </h2>
           </div>
         </div>
